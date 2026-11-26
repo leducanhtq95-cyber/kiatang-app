@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cài đặt ứng dụng Kia Tăng</title>
+<meta name="theme-color" content="#2E6B3B">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-180.png">
+<style>
+  :root { --tea: #2E6B3B; --tea-soft: #E1EEDC; --ink: #1B2A1E; --ink-2: #4D5E50; --line: #D9E2D3; --bg: #F3F6F1; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.6 "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .wrap { max-width: 880px; margin: 0 auto; padding-block: 28px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+  header { display: flex; gap: 16px; align-items: center; margin-bottom: 22px; }
+  header img { width: 72px; height: 72px; border-radius: 16px; background: #fff; border: 1px solid var(--line); }
+  h1 { margin: 0; font-size: 24px; text-wrap: balance; }
+  header p { margin: 2px 0 0; color: var(--ink-2); }
+  .top { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: 16px; margin-bottom: 16px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; }
+  .card h2 { margin: 0 0 8px; font-size: 17px; display: flex; align-items: center; gap: 8px; }
+  .card ol { margin: 0; padding-left: 22px; }
+  .card li { margin: 3px 0; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 11px 18px; border-radius: 10px; font: inherit; font-weight: 600; text-decoration: none; cursor: pointer; border: 1px solid var(--line); background: #fff; color: var(--ink); }
+  .btn.pri { background: var(--tea); border-color: var(--tea); color: #fff; }
+  .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+  .qr { text-align: center; }
+  .qr #qr { width: 180px; height: 180px; margin: 4px auto 8px; }
+  .qr #qr img, .qr #qr canvas { width: 100% !important; height: 100% !important; }
+  .qr small { color: var(--ink-2); }
+  .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .tag { font-size: 12px; font-weight: 600; background: var(--tea-soft); color: var(--tea); border-radius: 99px; padding: 1px 9px; }
+  .note { margin-top: 16px; padding: 12px 16px; border-radius: 12px; background: var(--tea-soft); font-size: 14px; }
+  b { font-weight: 600; }
+  @media (max-width: 760px) { .top, .grid { grid-template-columns: minmax(0, 1fr); } .qr { display: none; } }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="icon-192.png" alt="Logo Chè Núi Kia Tăng">
+    <div><h1>Cài đặt ứng dụng Kia Tăng</h1><p>Phần mềm quản lý kinh doanh – Công ty Cổ phần Chè Núi Kia Tăng</p></div>
+  </header>
+
+  <div class="top">
+    <div class="card">
+      <h2>Một ứng dụng cho mọi thiết bị</h2>
+      <p style="margin:0">Cài một lần trên máy tính, điện thoại Android hoặc iPhone. Ứng dụng có biểu tượng riêng, mở toàn màn hình như ứng dụng thường và <b>tự cập nhật</b> mỗi khi phần mềm có bản mới. Dữ liệu dùng chung trên hệ thống của công ty.</p>
+      <div class="actions">
+        <button class="btn pri" id="installNow" type="button" hidden>Cài đặt ngay trên máy này</button>
+        <a class="btn" href="/">Mở phần mềm</a>
+      </div>
+      <p id="installed" hidden style="margin:12px 0 0;color:var(--tea);font-weight:600">Ứng dụng đã được cài trên máy này.</p>
+    </div>
+    <div class="card qr">
+      <div id="qr" aria-label="Mã QR đến kiatang.ap.vn"></div>
+      <small>Quét bằng camera điện thoại để mở <b>kiatang.ap.vn</b></small>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Android <span class="tag">Chrome</span></h2>
+      <ol>
+        <li>Mở <b>kiatang.ap.vn</b> bằng <b>Chrome</b>.</li>
+        <li>Bấm <b>Cài đặt</b> trên thanh xanh ở đầu trang. Nếu không thấy: bấm <b>⋮</b> › <b>Cài đặt ứng dụng</b> (hoặc <b>Thêm vào MH chính</b>).</li>
+        <li>Bấm <b>Cài đặt</b>. Biểu tượng <b>Kia Tăng</b> xuất hiện trong danh sách ứng dụng.</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h2>iPhone / iPad <span class="tag">Safari</span></h2>
+      <ol>
+        <li>Mở <b>kiatang.ap.vn</b> bằng <b>Safari</b>.</li>
+        <li>Bấm nút <b>Chia sẻ</b> (ô vuông có mũi tên lên).</li>
+        <li>Chọn <b>Thêm vào MH chính</b> › <b>Thêm</b>.</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h2>Máy tính <span class="tag">Chrome / Edge</span></h2>
+      <ol>
+        <li>Mở <b>kiatang.ap.vn</b> bằng <b>Chrome</b> hoặc <b>Microsoft Edge</b>.</li>
+        <li>Bấm biểu tượng <b>Cài đặt</b> ở cuối thanh địa chỉ, hoặc nút <b>Cài đặt</b> trên thanh xanh.</li>
+        <li>Ứng dụng có biểu tượng trên màn hình nền và thanh tác vụ.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="note">Gỡ ứng dụng như gỡ ứng dụng bình thường. Tên đăng nhập và mật khẩu do quản trị viên cấp. Quên mật khẩu, liên hệ quản trị viên.</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+(function () {
+  try { new QRCode(document.getElementById('qr'), { text: 'https://kiatang.ap.vn', width: 180, height: 180, correctLevel: QRCode.CorrectLevel.M }); } catch (e) { document.getElementById('qr').textContent = 'kiatang.ap.vn'; }
+  var standalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+  if (standalone) document.getElementById('installed').hidden = false;
+  var deferred = null, btn = document.getElementById('installNow');
+  window.addEventListener('beforeinstallprompt', function (e) { e.preventDefault(); deferred = e; btn.hidden = false; });
+  window.addEventListener('appinstalled', function () { btn.hidden = true; document.getElementById('installed').hidden = false; });
+  btn.onclick = function () { if (deferred) { deferred.prompt(); deferred = null; btn.hidden = true; } };
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(function () {});
+})();
+</script>
+</body>
+</html>
