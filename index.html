@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chè Núi Kia Tăng – Quản lý kinh doanh</title>
+<meta name="description" content="Phần mềm quản lý kinh doanh Công ty Cổ phần Chè Núi Kia Tăng">
+<meta name="theme-color" content="#2E6B3B">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Kia Tăng">
+<style>
+  html, body { margin: 0; height: 100%; background: #F3F6F1; font-family: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", sans-serif; }
+  #app { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+  #wait { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; color: #4D5E50; font-size: 14px; }
+  #wait img { width: 120px; height: 120px; border-radius: 24px; }
+  #wait a { color: #2E6B3B; }
+</style>
+</head>
+<body>
+<!-- Trang trung gian: hiển thị app Google Apps Script toàn màn hình dưới tên miền kiatang.ap.vn.
+     Dữ liệu vẫn lưu trên Google Sheets; trang này không lưu gì. Đổi link app ở thuộc tính src bên dưới. -->
+<div id="wait">
+  <img src="icon-192.png" alt="Logo Chè Núi Kia Tăng">
+  <div>Đang mở phần mềm…</div>
+  <div style="font-size:12.5px">Không mở được? <a id="direct" href="https://script.google.com/macros/s/AKfycbz0bfYch_aoq0dWAe36jXzdkpkpFkXX0lPKmveZLBqnz7eEX4DnY5vMJqMdZ4Vnsz7C/exec">Mở trực tiếp</a></div>
+</div>
+<iframe id="app" title="Chè Núi Kia Tăng – Quản lý kinh doanh"
+  src="https://script.google.com/macros/s/AKfycbz0bfYch_aoq0dWAe36jXzdkpkpFkXX0lPKmveZLBqnz7eEX4DnY5vMJqMdZ4Vnsz7C/exec"
+  allow="camera; clipboard-write; fullscreen"></iframe>
+</body>
+</html>
